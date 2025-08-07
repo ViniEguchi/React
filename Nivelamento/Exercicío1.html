@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Insira o sabor da Pizza:</div>
+    <input type="text" id="ipt_sabor">
+
+    <br>
+    
+    <div>Insira o preço da Pizza:</div>
+    <input type="text" id="ipt_preco">
+
+    <br>
+
+    <div>Insira a quantidade de amigos:</div>
+    <input type="text" id="ipt_qtd">
+
+    <br>
+
+    <button onclick="calcular()">Ver valor por amigo</button>
+
+    <div id="div_resposta"></div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var valor = ipt_preco.value;
+        var sabor = ipt_sabor.value;
+        var qtd = ipt_qtd.value;
+
+        var valor_pessoa = (valor * 1.1) / qtd;
+        
+        div_resposta.innerHTML = `Cada amigo vai colaborar com R$${valor_pessoa} para a pizza de ${sabor}.`;
+    }
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Insira uma musica que gosta:</div>
+    <input type="text" id="ipt_musica">
+    <button onclick="cadastrar()">Cadastrar</button>
+
+    <button onclick="exibir()">Exibir</button>
+
+    <br><br>
+
+    <div>De...</div>
+    <input type="number" id="ipt_inicio">
+    <div>Até...</div>
+    <input type="number" id="ipt_fim">
+    <button onclick="filtrar()">Filtrar</button>
+    
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    musicas = [];
+
+    function cadastrar() {
+        musicas.push(ipt_musica.value);
+    }
+
+    function exibir() {
+        var resposta = '';
+
+        for (let i = 0; i < musicas.length; i++) {
+            resposta += `${musicas[i]} <br>`
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+
+    function filtrar() {
+        var inicio = Number(ipt_inicio.value) - 1;
+        var fim = Number(ipt_fim.value);
+
+        var resposta = '';
+
+        for (let i = inicio; i < fim; i++) {
+            resposta += `${musicas[i]} <br>`
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+</script>

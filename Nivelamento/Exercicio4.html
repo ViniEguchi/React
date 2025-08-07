@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Selecione a tabuada:</div>
+    <select id="select_tabuada">
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+    </select>
+
+    <br>
+
+    <div>Insira a quantidade de numeros da tabuada</div>
+    <input type="number" id="ipt_qtd">
+
+    <br>
+
+    <button onclick="tabuada()">Ver tabuada</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    function tabuada() {
+        var num = Number(select_tabuada.value);
+
+        var resposta = '';
+
+        for (let i = 1; i <= ipt_qtd.value; i++) {
+            var resultado = num * i;
+            resposta += `${num} X ${i} = ${resultado} <br>`;
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+</script>

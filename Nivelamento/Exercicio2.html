@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>nota 1</div>
+    <input type="text" id="ipt_n1">
+
+    <br>
+    
+    <div>nota 2</div>
+    <input type="text" id="ipt_n2">
+
+    <br>
+
+    <button onclick="calcular()">Verificar Situação</button>
+
+    <div id="div_resposta"></div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var n1 = Number(ipt_n1.value);
+        var n2 = Number(ipt_n2.value);
+
+        var media = (n1 + n2) / 2;
+
+        if (media >= 6) {
+            div_resposta.innerHTML = `Parabéns, aprovado!`;
+        } else {
+            div_resposta.innerHTML = `Tente outra vez...`;
+        }
+    }
+</script>

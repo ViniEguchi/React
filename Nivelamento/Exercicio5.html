@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Digite um filme que gosta:</div>
+    <input type="text" id="ipt_filme">
+
+    <br>
+
+    <button onclick="listar()">Cadastrar</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    var lista = [];
+
+    function listar() {
+        var filme = ipt_filme.value;
+
+        var resposta = '';
+
+        lista.push(filme);
+
+        for (let i = 0; i < lista.length; i++) {
+            resposta += `${lista[i]} <br>`
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+</script>

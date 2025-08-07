@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Nome Tarefa:</div>
+    <input type="text" id="ipt_tarefa">
+
+    <br>
+
+    <div>Status da tarefa:</div>
+    <select id="select_status">
+        <option>Pendente</option>
+        <option>Concluido</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="adicionar()">Adicionar Tarefa</button>
+    <button onclick="exibir()">Exibir Todas</button>
+
+    <br>
+
+    <button onclick="pendentes()">Ver somente pendentes</button>
+    <button onclick="concluidas()">Ver somente concluidas</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    tarefas = [];
+    lista_status = [];
+
+    function adicionar() {
+        var status_atual = select_status.value;
+
+        lista_status.push(status_atual);
+        tarefas.push(ipt_tarefa.value);
+    }
+
+    function exibir() {
+        var resposta = '';
+
+        for (let i = 0; i < tarefas.length; i++) {
+            resposta += `tarefa: ${tarefas[i]}; status: ${lista_status[i]} <br>`
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+
+    function pendentes() {
+        var resposta = '';
+
+        for (let i = 0; i < tarefas.length; i++) {
+            if (lista_status[i] == "Pendente") {
+                resposta += `tarefa: ${tarefas[i]}; status: ${lista_status[i]} <br>`
+            }
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+
+    function concluidas() {
+        var resposta = '';
+
+        for (let i = 0; i < tarefas.length; i++) {
+            if (lista_status[i] == "Concluido") {
+                resposta += `tarefa: ${tarefas[i]}; status: ${lista_status[i]} <br>`
+            }
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+</script>

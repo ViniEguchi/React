@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Nome do Aluno:</div>
+    <input type="text" id="ipt_nome">
+
+    <br>
+
+    <div>Idade do Aluno:</div>
+    <input type="number" id="ipt_idade">
+
+    <br>
+    
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="exibir()">Exibir todos</button>
+
+    <br><br>
+
+    <div>De...</div>
+    <input type="number" id="ipt_inicio">
+    <div>Até...</div>
+    <input type="number" id="ipt_fim">
+
+    <br>
+
+    <button onclick="filtrar()">Filtrar por Idade</button>
+
+    <br>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    var nomes = [];
+    var idades = [];
+
+    function cadastrar() {
+        nomes.push(ipt_nome.value);
+        idades.push(ipt_idade.value);
+    }
+
+    function exibir() {
+        var resposta = '';
+
+        for (let i = 0; i < nomes.length; i++) {
+            resposta += `Nome: ${nomes[i]}; Idade: ${idades[i]} <br>`
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+
+    function filtrar() {
+        var inicio = Number(ipt_inicio.value) - 1;
+        var fim = Number(ipt_fim.value);
+
+        var resposta = '';
+
+        for (let i = 0; i < nomes.length; i++) {
+            if (idades[i] <= fim && idades[i] >= inicio) {
+                resposta += `Nome: ${nomes[i]}; Idade: ${idades[i]} <br>`
+            }
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+</script>

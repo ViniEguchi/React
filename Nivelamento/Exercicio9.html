@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Escolha sua bebida:</div>
+    <select id="select_pref">
+        <option>Chá</option>
+        <option>Café</option>
+        <option>Suco</option>
+    </select>
+
+    <button onclick="votar()">Votar</button>
+    <button onclick="resultado()">Ver Resultado</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+    var bebidas = [
+        {
+            nome: "Chá",
+            votos: 0
+        },
+        {
+            nome: "Café",
+            votos: 0
+        },
+        {
+            nome: "Suco",
+            votos: 0
+        }
+    ]
+
+    function votar() {
+        var bebida = select_pref.value;
+
+        if (bebida == "Chá") {
+            bebidas[0].votos++;
+        } else if (bebida == "Café") {
+            bebidas[1].votos++;
+        } else {
+            bebidas[2].votos++;
+        }
+    }
+
+    function resultado() {
+        var resposta = '';
+
+        for (let i = 0; i < bebidas.length; i++) {
+            resposta += `Bebida: ${bebidas[i].nome}; Quantidade de Votos: ${bebidas[i].votos} <br>`
+        }
+
+        if (bebidas[0].votos > bebidas[1].votos && bebidas[0].votos > bebidas[2].votos) {
+            resposta += `<br> <h3>${bebidas[0].nome} está ganhando com ${bebidas[0].votos} votos!</h3>`
+        } else if (bebidas[1].votos > bebidas[0].votos && bebidas[1].votos > bebidas[2].votos) {
+            resposta += `<br> <h3>${bebidas[1].nome} está ganhando com ${bebidas[1].votos} votos!</h3>`
+        } else {
+            resposta += `<br> <h3>${bebidas[2].nome} está ganhando com ${bebidas[2].votos} votos!</h3>`
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+</script>
