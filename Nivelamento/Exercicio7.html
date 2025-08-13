@@ -35,8 +35,8 @@
 </html>
 
 <script>
-    tarefas = [];
-    lista_status = [];
+    var tarefas = [];
+    var lista_status = [];
 
     function adicionar() {
         var status_atual = select_status.value;
@@ -72,6 +72,19 @@
 
         for (let i = 0; i < tarefas.length; i++) {
             if (lista_status[i] == "Concluido") {
+                resposta += `tarefa: ${tarefas[i]}; status: ${lista_status[i]} <br>`
+            }
+        }
+
+        div_mensagem.innerHTML = resposta;
+    }
+
+    // Função para fazer exibir(), pendentes() e concluidas() tudo na mesma função
+    function exibir_refatorado(status) {
+        var resposta = '';
+
+        for (let i = 0; i < tarefas.length; i++) {
+            if (!status || lista_status[i] == status) {
                 resposta += `tarefa: ${tarefas[i]}; status: ${lista_status[i]} <br>`
             }
         }
