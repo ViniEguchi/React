@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Informe o nome da receita:</div>
+    <input type="text" id="ipt_receita">
+
+    <br>
+
+    <div>Informe o tempo de preparo</div>
+    <input type="text" id="ipt_tempo">
+
+    <br>
+
+    <button onclick="add()">Cadastrar</button>
+
+    <br><br>
+
+    <div>Digite quantidade para filtro:</div>
+    <input type="text" id="ipt_filtro">
+    <button onclick="filter()">Filtrar por tempo</button>
+
+    <div id="div_msg"></div>
+</body>
+</html>
+
+<script>
+    let list = [];
+    
+    function add() {
+        list.push({ receita: ipt_receita.value, tempo: Number(ipt_tempo.value) });
+    }
+
+    function filter() {
+        let msg = '';
+
+        const sorted_list = list.filter(x => x.tempo <= Number(ipt_filtro.value));
+
+        const new_list = sorted_list.forEach(x => {
+            msg += `receita: ${x.receita} | tempo: ${x.tempo}<br>`;
+        });
+
+        div_msg.innerHTML = msg;
+    }
+</script>

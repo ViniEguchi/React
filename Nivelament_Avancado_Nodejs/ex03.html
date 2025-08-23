@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Informe o nome do jogo:</div>
+    <input type="text" id="ipt_jogo">
+
+    <br>
+
+    <div>Informe a pontuação:</div>
+    <input type="text" id="ipt_pontos">
+
+    <br><br>
+
+    <button onclick="add()">Adicionar</button>
+    <button onclick="rank()">Mostrar Ranking</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [];
+
+    function add() {
+        list.push({ jogo: ipt_jogo.value, pontuacao: ipt_pontos.value });
+    }
+
+    function rank() {
+        let msg = '';
+
+        const sorted_list = list.sort((a, b) => b.pontuacao - a.pontuacao);
+
+        const new_list = sorted_list.forEach(x => {
+            msg += `jogo: ${x.jogo} | pontuacao: ${x.pontuacao}<br>`;
+        });
+
+        let highest_rank = sorted_list.at(0)
+
+        msg += `Jogo com a maior pontuação: ${highest_rank.jogo}`
+
+        div_msg.innerHTML = msg;
+    }
+</script>

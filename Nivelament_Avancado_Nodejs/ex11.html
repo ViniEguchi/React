@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Insira o nome do aluno:</div>
+    <input type="text" id="ipt_nome">
+
+    <div>Insira a nota final do aluno:</div>
+    <input type="text" id="ipt_nota">
+
+    <br>
+
+    <button onclick="add()">Cadastrar</button>
+    <button onclick="show()">Exibir aprovados</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [];
+
+    function add() {
+        list.push({ nome: ipt_nome.value, nota: Number(ipt_nota.value) });
+    }
+
+    function show() {
+        let msg = '';
+
+        const list_pass = list.filter(x => x.nota >= 6);
+
+        const sorted_list = list_pass.sort((a, b) => b.nota - a.nota);
+
+        const new_list = sorted_list.map(x => {
+            return `nome: ${x.nome} | nota: ${x.nota}`;
+        });
+
+        const sum = sorted_list.reduce((total, num) => (total.nota + num.nota));
+
+        div_msg.innerHTML = new_list.join("<br>");
+
+        div_msg.innerHTML += `<br>Media dos alunos aprovados: ${sum / sorted_list.length}`;
+    }
+</script>

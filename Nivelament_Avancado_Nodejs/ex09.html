@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Insira o nome do filme:</div>
+    <input type="text" id="ipt_filme">
+
+    <div>Insira o gênero do filme:</div>
+    <input type="text" id="ipt_genero">
+
+    <br>
+
+    <button onclick="add()">Cadastrar</button>
+
+    <br><br>
+
+    <div>Escolha o gênero para filtro</div>
+    <input type="text" id="ipt_filtro">
+
+    <br>
+
+    <button onclick="filter()">filtrar por gênero</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [];
+
+    function add() {
+        list.push({ filme: ipt_filme.value, genero: ipt_genero.value });
+    }
+
+    function show(list) {
+        let msg = '';
+
+        const new_list = list.forEach(x => {
+            msg += `Filme: ${x.filme} | Gênero: ${x.genero}<br>`;
+        });
+
+        div_msg.innerHTML = msg;
+    }
+
+    function filter() {
+        const filtro = ipt_filtro.value;
+
+        const sorted_list = list.filter(x => x.genero == filtro);
+
+        show(sorted_list);
+    }
+</script>

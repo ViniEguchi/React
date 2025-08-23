@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Informe o Titulo do Livro:</div>
+    <input type="text" id="ipt_titulo">
+
+    <br>
+
+    <div>Informe o Autor do Livro:</div>
+    <input type="text" id="ipt_autor">
+
+    <br><br>
+
+    <button onclick="add()">Cadastrar</button>
+    <button onclick="show()">Exibir Livros</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [];
+
+    function add() {
+        list.push({ titulo: ipt_titulo.value, autor: ipt_autor.value });
+        div_msg.innerHTML = `${ipt_titulo.value} cadastrado com sucesso!`;
+    }
+
+    function show() {
+        let msg = '';
+
+        const new_list = list.forEach(x => {
+            msg += `titulo: ${x.titulo} | autor: ${x.autor}<br>`;
+        });
+
+        div_msg.innerHTML = msg;
+    }
+</script>

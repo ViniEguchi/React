@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Informe o nome do contato:</div>
+    <input type="text" id="ipt_nome">
+
+    <br>
+
+    <div>Informe o telefone do contato:</div>
+    <input type="number" id="ipt_tel"></ipt>
+
+    <br><br>
+
+    <button onclick="add()">Adicionar contato</button>
+    <button onclick="show()">Exibir contatos</button>
+
+    <br><br>
+
+    <div>Digite o nome do contato que deseja remover:</div>
+    <input type="text" id="ipt_del">
+    <button onclick="del()">Deletar pelo nome</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [];
+
+    function add() {
+        list.push({ nome: ipt_nome.value, telefone: Number(ipt_tel.value) });
+    }
+
+    function show() {
+        let msg = '';
+
+        const sorted_list = list.toSorted((a, b) => {
+            const nome1 = a.nome;
+            const nome2 = b.nome;
+
+            if (nome1 < nome2) {
+                return -1;
+            }
+
+            if (nome1 > nome2) {
+                return 1;
+            }
+
+            return 0;
+        });
+
+        const new_list = sorted_list.forEach(x => {
+            msg += `nome: ${x.nome} | telefone repetições: ${x.telefone}<br>`;
+        });
+
+        div_msg.innerHTML = msg;
+    }
+
+    function del() {
+        let nome_del = ipt_del.value;
+
+        let i = 0
+
+        for (; i < list.length; i++) {
+            if (list[i].nome.toUpperCase() == nome_del) {
+                break
+            }
+        }
+
+        list.splice(i, 1);
+        div_msg.innerHTML = list;
+    }
+</script>

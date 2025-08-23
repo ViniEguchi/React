@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Informe o produto:</div>
+    <input type="text" id="ipt_produto">
+
+    <br>
+
+    <div>Informe a quantidade em estoque:</div>
+    <input type="text" id="ipt_qtd">
+
+    <br>
+
+    <button onclick="add()">Adicionar Produto</button>
+
+    <br><br>
+
+    <div>Digite quantidade para filtro:</div>
+    <input type="text" id="ipt_filtro">
+    <button onclick="filter()">Filtrar por quantidade</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [];
+
+    function add() {
+        list.push({ produto: ipt_produto.value, quantidade: Number(ipt_qtd.value) });
+    }
+
+    function filter() {
+        let msg = '';
+
+        const sorted_list = list.filter(x => x.quantidade < Number(ipt_filtro.value));
+
+        const new_list = sorted_list.forEach(x => {
+            msg += `produto: ${x.produto} | quantidade: ${x.quantidade}<br>`;
+        });
+
+        div_msg.innerHTML = msg;
+    }
+</script>

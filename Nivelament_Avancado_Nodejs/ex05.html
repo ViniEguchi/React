@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Informe o exercício:</div>
+    <input type="text" id="ipt_ex">
+
+    <br>
+
+    <div>Informe a quantidade de repetições:</div>
+    <input type="text" id="ipt_qtd">
+
+    <br>
+
+    <button onclick="add()">Adicionar</button>
+    <button onclick="show()">Exibir exercícios</button>
+
+    <br><br>
+
+    <div>Digite quantidade para filtro:</div>
+    <input type="text" id="ipt_filtro">
+    <button onclick="filter()">Filtrar por quantidade de repetições</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [];
+
+    function add() {
+        list.push({ exercicio: ipt_ex.value, quantidade: Number(ipt_qtd.value) });
+    }
+
+    function show() {
+        let msg = '';
+
+        const new_list = list.forEach(x => {
+            msg += `Exercicio: ${x.exercicio} | Quantidade repetições: ${x.quantidade}<br>`;
+        });
+
+        div_msg.innerHTML = msg;
+    }
+
+    function filter() {
+        let msg = '';
+
+        const sorted_list = list.filter(x => x.quantidade < Number(ipt_filtro.value));
+
+        const new_list = sorted_list.forEach(x => {
+            msg += `exercicio: ${x.exercicio} | quantidade: ${x.quantidade}<br>`;
+        });
+
+        div_msg.innerHTML = msg;
+    }
+</script>

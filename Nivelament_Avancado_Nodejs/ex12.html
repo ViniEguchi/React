@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Insira o nome do produto:</div>
+    <input type="text" id="ipt_nome">
+
+    <div>Insira o preço do produto:</div>
+    <input type="text" id="ipt_preco">
+
+    <div>Insira a quantidade em estoque do produto:</div>
+    <input type="text" id="ipt_qtd">
+
+    <br>
+
+    <button onclick="add()">Cadastrar</button>
+
+    <br><br>
+
+    <div>Escolha o preço máximo:</div>
+    <input type="text" id="ipt_filtro">
+
+    <br>
+
+    <button onclick="filter()">Produtos em promoção</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [];
+
+    function add() {
+        list.push({ nome: ipt_nome.value, preco: Number(ipt_preco.value), quantidade: Number(ipt_qtd.value) });
+    }
+
+    function filter() {
+        let msg = '';
+
+        const list_pass = list.filter(x => x.preco <= Number(ipt_filtro.value));
+
+        const list_discount = list_pass.map(x => { return { nome: x.nome, preco: x.preco * 0.9, quantidade: x.quantidade }; });
+
+        const sorted_list = list_discount.sort((a, b) => b.preco - a.preco);
+
+        const new_list = sorted_list.map(x => {
+            return `nome: ${x.nome} | preco: ${x.preco} | quantidade: ${x.quantidade}`;
+        });
+
+        const sum = sorted_list.reduce((total, num) => (total + (num.preco * num.quantidade)), 0);
+
+        div_msg.innerHTML = new_list.join("<br>");
+
+        div_msg.innerHTML += `<br>Preço total do estoque: R$${sum}`;
+    }
+</script>

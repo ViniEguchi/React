@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Insira o peso de hoje</div>
+    <input type="text" id="ipt_peso">
+
+    <br>
+
+    <button onclick="add()">Adicionar Peso</button>
+    <button onclick="show()">Exibir Histórico</button>
+    <button onclick="avg()">Calcular Média</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [];
+
+    function add() {
+        list.push(Number(ipt_peso.value));
+    }
+
+    function show() {
+        let msg = '';
+
+        const new_list = list.forEach(x => {
+            msg += `peso: ${x} Kg <br>`;
+        });
+
+        div_msg.innerHTML = msg;
+    }
+
+    function avg() {
+        const sum = list.reduce((total, num) => (total + num));
+
+         div_msg.innerHTML = sum / list.length;
+    }
+</script>

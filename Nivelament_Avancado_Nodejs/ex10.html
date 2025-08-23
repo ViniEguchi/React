@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Escolha sua atividade favorita:</div>
+    <select id="slc_atividade">
+        <option>Natação</option>
+        <option>Yoga</option>
+        <option>Corrida</option>
+    </select>
+
+    <button onclick="vote()">Votar</button>
+    <button onclick="result()">Resultado</button>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [{
+        atividade: 'Natação',
+        votos: 0
+    },
+    {
+        atividade: 'Yoga',
+        votos: 0
+    },
+    {
+        atividade: 'Corrida',
+        votos: 0
+    }];
+
+    function vote() {
+        const atividade = slc_atividade.value;
+
+        list.map(a => {
+            if (a.atividade == atividade) {
+                a.votos++;
+            }
+        })
+    }
+
+    function result() {
+        let msg = '';
+
+        const new_list = list.forEach(x => {
+            msg += `Atividade: ${x.atividade} | Votos: ${x.votos}<br>`;
+        });
+
+        const highest = list.reduce((maior, atual) => {
+            if (atual.votos > maior.votos) {
+                return atual;
+            } else {
+                return maior;
+            }
+        });
+
+        msg += `A atividade com mais votos é: ${highest.atividade}`;
+
+        div_msg.innerHTML = msg;
+    }
+</script>

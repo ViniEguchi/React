@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Insira o nome do item:</div>
+    <input type="text" id="ipt_item">
+
+    <br>
+
+    <div>Insira a quantidade:</div>
+    <input type="text" id="ipt_qtd">
+
+    <br><br>
+
+    <button onclick="add()">Adicionar à Lista</button>
+
+    <button onclick="show()">Exibir lista</button>
+
+    <br>
+
+    <div id="div_msg"></div>
+</body>
+
+</html>
+
+<script>
+    let list = [];
+
+    function add() {
+        list.push({ item: ipt_item.value, quantidade: ipt_qtd.value });
+    }
+
+    function show() {
+        let msg = '';
+
+        const new_list = list.forEach(x => {
+            msg += `Item: ${x.item} | Quantidade: ${x.quantidade}<br>`;
+        });
+
+        div_msg.innerHTML = msg;
+    }
+</script>
