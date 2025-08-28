@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    /* background-color: black; */
+    color: aliceblue;
+    border: solid aliceblue 1px;
+    border-radius: 15px;
+}
+
+.buttons {
+    display: flex;
+    height: 40px;
+    width: 400px;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    font-size: 25px;
+}
+
+.line {
+    display: flex;
+    font-size: 25px;
+}
+
+.label {
+
+}
+
+input {
+
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+}
