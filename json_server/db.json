@@ -1,0 +1,12 @@
+{
+    "pessoas": [
+        {
+            "nome": "João Pedro",
+            "id": 1
+        },
+        {
+            "nome": "Pedro Rocha",
+            "id": 2
+        }
+    ]
+}
