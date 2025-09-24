@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { Placar } from './components/Placar'
 import { Cards, ListarCard } from './components/Cards'
+import { CardNaruto } from './components/CardNaruto'
 
 function App() {
 
@@ -83,9 +84,13 @@ function App() {
 
       {/* <Cards titulo={"teste"} descricao={"tentando não errar"} img={"../public/vite.svg"} tipo={"oi"} desabilitado={true}/> */}
 
-      <ul>
+      {/* <ul>
         {ListarCard()}
-      </ul>
+      </ul> */}
+
+      {/* <p className='text-red-600'>Hello how are you?</p> */}
+
+      <CardNaruto/>
     </>
   )
 }
