@@ -5,6 +5,8 @@ import './App.css'
 import { Placar } from './components/Placar'
 import { Cards, ListarCard } from './components/Cards'
 import { CardNaruto } from './components/CardNaruto'
+import { Contador } from './components/Contador'
+import { ListaFrutas } from './components/ListaFrutas'
 
 function App() {
 
@@ -90,7 +92,11 @@ function App() {
 
       {/* <p className='text-red-600'>Hello how are you?</p> */}
 
-      <CardNaruto/>
+      {/* <CardNaruto/> */}
+
+      {/* <Contador /> */}
+
+      <ListaFrutas />
     </>
   )
 }
