@@ -1,30 +1,28 @@
-import { useState } from 'react';
+import { useEffect, useState } from "react"
 
 export function Contador() {
-    const [contadora, setContadora] = useState(0);
-    console.log("Renderização");
-    
-    function contar() {
-        setContadora(contadora + 1);
+    const [contador, setContador] = useState(0);
+
+    useEffect(() => {
+        document.title = contador
+    })
+
+    function somar() {
+        setContador(contador + 1);
     }
-    
-    const [mensagem, setMensagem] = useState("");
-    
-    function exibirMensagem() {
-        if (contadora < 10) {
-            return <p>Quase lá</p>;
-        } else if (contadora < 20) {
-            return <p>Persista guerreiro</p>;
-        } else {
-            return <p>Vc é o fera</p>;
-        }
+
+    function subtrair() {
+        setContador(contador - 1);
     }
 
     return (
         <>
-            <button onClick={contar}>Clique</button>
-            <div>Contador: {contadora}</div>
-            <div>{exibirMensagem()}</div>
+            <div>
+                <button onClick={somar}>Adicionar</button>
+                <button onClick={subtrair}>Diminuir</button>
+            </div>
+
+            <div>Contador: {contador}</div>
         </>
-    );
+    )
 }

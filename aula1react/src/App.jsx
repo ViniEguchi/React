@@ -5,8 +5,12 @@ import './App.css'
 import { Placar } from './components/Placar'
 import { Cards, ListarCard } from './components/Cards'
 import { CardNaruto } from './components/CardNaruto'
-import { Contador } from './components/Contador'
+import { Contador1 } from './components/Contador1'
 import { ListaFrutas } from './components/ListaFrutas'
+import { Calculadora } from './components/Calculadora'
+import { ListaTelefonica } from './components/ListaTelefonica'
+import { Contador } from './components/Contador'
+import { ExibirPersonagens } from './components/ExibirPersonagens'
 
 function App() {
 
@@ -94,9 +98,17 @@ function App() {
 
       {/* <CardNaruto/> */}
 
+      {/* <Contador1 /> */}
+
+      {/* <ListaFrutas /> */}
+
+      {/* <Calculadora /> */}
+
+      {/* <ListaTelefonica /> */}
+
       {/* <Contador /> */}
 
-      <ListaFrutas />
+      <ExibirPersonagens />
     </>
   )
 }
