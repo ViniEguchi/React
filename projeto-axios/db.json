@@ -1,0 +1,93 @@
+{
+  "personagens": [
+    {
+      "nome": "Peter Parker",
+      "codinome": "Homem-Aranha",
+      "picture": "/homem-aranha.jpg",
+      "poderes": [
+        "Agilidade sobre-humana",
+        "Força proporcional a um aranha",
+        "Sentido Aranha",
+        "Fator de cura rápido"
+      ],
+      "afiliacao": [
+        "Vingadores",
+        "Quarteto Fantástico (temporariamente)"
+      ],
+      "idade": 18,
+      "cidade": "Nova York"
+    },
+    {
+      "nome": "Tony Stark",
+      "codinome": "Homem de Ferro",
+      "picture": "/homem-ferro.jpeg",
+      "poderes": [
+        "Gênio em engenharia",
+        "Armadura com armas avançadas",
+        "Voo"
+      ],
+      "afiliacao": [
+        "Vingadores",
+        "Iniciativa Vingadores"
+      ],
+      "idade": 48,
+      "cidade": "Nova York"
+    },
+    {
+      "nome": "Natasha Romanoff",
+      "codinome": "Viúva Negra",
+      "picture": "/viuva-negra.jpg",
+      "poderes": [
+        "Combate corpo a corpo",
+        "Espionagem",
+        "Armas de fogo avançadas",
+        "Acrobacia"
+      ],
+      "afiliacao": [
+        "Vingadores",
+        "S.H.I.E.L.D."
+      ],
+      "idade": 35,
+      "cidade": "Moscou"
+    },
+    {
+      "nome": "Stephen Strange",
+      "codinome": "Doutor Estranho",
+      "picture": "/doctor-strange.webp",
+      "poderes": [
+        "Magia",
+        "Viagem entre dimensões",
+        "Manipulação de tempo",
+        "Teletransporte"
+      ],
+      "afiliacao": [
+        "Místicos de Kamar-Taj",
+        "Vingadores"
+      ],
+      "idade": 42,
+      "cidade": "Nova York"
+    },
+    {
+      "nome": "Carol Danvers",
+      "codinome": "Capitã Marvel",
+      "picture": "/capita-marvel.jpg",
+      "poderes": [
+        "Força sobre-humana",
+        "Voo",
+        "Projéteis de energia",
+        "Resistência aprimorada"
+      ],
+      "afiliacao": [
+        "Vingadores",
+        "Força Aérea dos EUA"
+      ],
+      "idade": 34,
+      "cidade": "Los Angeles"
+    },
+    {
+      "id": 1,
+      "nome": "Pedro",
+      "picture": "/teste.png"
+    }
+  ]
+}
