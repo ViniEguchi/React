@@ -1,0 +1,144 @@
+{
+  "filmes": [
+    {
+      "id": 1,
+      "titulo": "A Origem (Inception)",
+      "genero": "Ficção Científica",
+      "duracao": 148,
+      "nota": 9
+    },
+    {
+      "id": 2,
+      "titulo": "Parasita",
+      "genero": "Drama",
+      "duracao": 132,
+      "nota": 9
+    },
+    {
+      "id": 3,
+      "titulo": "O Poderoso Chefão",
+      "genero": "Crime",
+      "duracao": 175,
+      "nota": 9.2
+    },
+    {
+      "id": 4,
+      "titulo": "Interestelar",
+      "genero": "Ficção Científica",
+      "duracao": 169,
+      "nota": 8.6
+    },
+    {
+      "id": 5,
+      "titulo": "Coringa",
+      "genero": "Drama",
+      "duracao": 122,
+      "nota": 8.4
+    },
+    {
+      "id": 6,
+      "titulo": "Pulp Fiction",
+      "genero": "Crime",
+      "duracao": 154,
+      "nota": 8.9
+    },
+    {
+      "id": 7,
+      "titulo": "Matrix",
+      "genero": "Ficção Científica",
+      "duracao": 136,
+      "nota": 8.7
+    },
+    {
+      "id": 8,
+      "titulo": "Forrest Gump",
+      "genero": "Drama",
+      "duracao": 142,
+      "nota": 8.8
+    },
+    {
+      "id": 9,
+      "titulo": "O Senhor dos Anéis: O Retorno do Rei",
+      "genero": "Fantasia",
+      "duracao": 201,
+      "nota": 9
+    },
+    {
+      "id": 10,
+      "titulo": "Clube da Luta",
+      "genero": "Drama",
+      "duracao": 139,
+      "nota": 8.8
+    },
+    {
+      "id": 11,
+      "titulo": "Gladiador",
+      "genero": "Ação",
+      "duracao": 155,
+      "nota": 8.5
+    },
+    {
+      "id": 12,
+      "titulo": "O Resgate do Soldado Ryan",
+      "genero": "Guerra",
+      "duracao": 169,
+      "nota": 8.6
+    },
+    {
+      "id": 13,
+      "titulo": "Batman: O Cavaleiro das Trevas",
+      "genero": "Ação",
+      "duracao": 152,
+      "nota": 9
+    },
+    {
+      "id": 14,
+      "titulo": "Cidade de Deus",
+      "genero": "Crime",
+      "duracao": 130,
+      "nota": 8.6
+    },
+    {
+      "id": 15,
+      "titulo": "Os Infiltrados",
+      "genero": "Crime",
+      "duracao": 151,
+      "nota": 8.5
+    },
+    {
+      "id": 16,
+      "titulo": "Django Livre",
+      "genero": "Western",
+      "duracao": 165,
+      "nota": 8.4
+    },
+    {
+      "id": 17,
+      "titulo": "Up - Altas Aventuras",
+      "genero": "Animação",
+      "duracao": 96,
+      "nota": 8.3
+    },
+    {
+      "id": 18,
+      "titulo": "O Iluminado",
+      "genero": "Terror",
+      "duracao": 146,
+      "nota": 8.4
+    },
+    {
+      "id": 19,
+      "titulo": "Mad Max: Estrada da Fúria",
+      "genero": "Ação",
+      "duracao": 120,
+      "nota": 8.1
+    },
+    {
+      "titulo": "Vingadores: Ultimato",
+      "genero": "Ação",
+      "duracao": 181,
+      "nota": 8.4,
+      "id": 20
+    }
+  ]
+}
