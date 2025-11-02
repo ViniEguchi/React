@@ -1,12 +1,9 @@
+import { RouterProvider } from 'react-router-dom';
 import './App.css'
+import { routes } from './provider/route.jsx'
 
 function App() {
-
-  return (
-    <div>
-      {/* Implemente as configurações das rotas aqui */}
-    </div>
-  )
+  return <RouterProvider router={routes} />;
 }
 
 export default App
