@@ -1,0 +1,78 @@
+{
+  "postagens": [
+    {
+      "titulo": "Teste de uma publicação",
+      "conteudo": "teste teste ",
+      "usuarioId": "b33947a9-5a82-4971-a34b-4fc561a442e4",
+      "criadoEm": "2025-06-06T13:10:19.850Z",
+      "id": "df71689b-d517-4af3-8e42-1be334d424bd",
+      "createdAt": "2025-06-06T13:10:19.850Z",
+      "imagem": "1762990278088-604827877.png",
+      "atualizadoEm": "2025-06-06T13:13:39.318Z"
+    }
+  ],
+  "comentarios": [
+    {
+      "id": "d4842d44-2be8-4b98-83fe-1b326c26bff7",
+      "descricao": "Adorei a imagem do Naruto!",
+      "usuarioId": "8df357e8-fa99-4196-9737-d71c34d0e5b9",
+      "idPostagem": "6c9f1664-1ab1-46c7-9460-31e52e2befad"
+    },
+    {
+      "id": "344f2b3d-1fb5-4022-accb-d73feaa87498",
+      "descricao": "po que legal!",
+      "usuarioId": "b6b3a0e8-f5d4-4d9d-afd5-bbf17073b388",
+      "idPostagem": "4ae8c371-25d2-481e-8c4c-7413d287ac74"
+    }
+  ],
+  "usuarios": [
+    {
+      "nome": "dev dos devs",
+      "email": "dev@email.com",
+      "senha": "$2b$10$EHKe77x6hcmRoStN3jUoxuHeuT3UXV7OsqdKEQt9mpPTsHjcKXyL6",
+      "id": "a6069aa3-e869-4af0-a2a0-49fbe5b73082"
+    },
+    {
+      "nome": "Pedro",
+      "email": "teste@teste.com",
+      "senha": "$2b$10$dt7TO4/sCYt4e/uh.IcaaO8ZuLHYu8C3tuarXx6tVcFANzDCp9dgi",
+      "id": "cb399ec5-f2b4-43e3-a4ec-7f2eeb5f383a"
+    },
+    {
+      "nome": "Pedro",
+      "email": "pedro.rsilva@sptech.school",
+      "senha": "$2b$10$1C6Vb.DhYXlitx8PVcLm/e4KRfQSk2vV.497qghSghaIr6PI/8qD.",
+      "id": "be2a852b-5a96-49fe-916f-1fe47a8883b2"
+    },
+    {
+      "nome": "Pedro Rocha",
+      "email": "pedro@teste.com",
+      "senha": "$2b$10$ErP1DxVDAL4wB.FO.Pyq6uaL.W3nYV3uvDmcTIfmm0sDEZzK8y47W",
+      "id": "ef696c9e-4803-4266-8fe4-2ccb96da341a"
+    },
+    {
+      "nome": "Nando",
+      "email": "nando@gmail.com",
+      "senha": "$2b$10$RTi9YCNfQdkVguX15cS0puzQE70KWflY7D.NLjcRXpNsRZKtvB2bW",
+      "id": "b6b3a0e8-f5d4-4d9d-afd5-bbf17073b388"
+    },
+    {
+      "nome": "fernando123",
+      "email": "fernando123@gmail.com",
+      "senha": "$2b$10$7kFSf0nQ8iL8S6.eDPG21eclO8kxreajd9B/6QBkb5BGevmkKl1S6",
+      "id": "82c45b69-6531-477d-8cea-1a0e22160462"
+    },
+    {
+      "nome": "Teste",
+      "email": "teste123@gmail.com",
+      "senha": "$2b$10$m7o465fCGG6zpY6zmk0MpOprMhyo61Cw08IyJEJ.cK90Xif9tZXCe",
+      "id": "8df357e8-fa99-4196-9737-d71c34d0e5b9"
+    },
+    {
+      "nome": "Fernando",
+      "email": "nando123@gmail.com",
+      "senha": "$2b$10$qqjqlMrQvQRNtadmbIfCeeFNxL.Ut82mreZbMS/8WU42yUmttWJli",
+      "id": "b33947a9-5a82-4971-a34b-4fc561a442e4"
+    }
+  ]
+}
